@@ -55,6 +55,7 @@ class FormGuideAdapter:
                     elif tdCounter == 11:
                         formGuideRow.totalPoints = int(td.contents[0])
             formGuideData.append(formGuideRow)
+        return formGuideData
         
 # Example call
 # formGuideAdapter = FormGuideAdapter()
