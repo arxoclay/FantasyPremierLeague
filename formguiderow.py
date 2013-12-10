@@ -1,17 +1,17 @@
 class FormGuideRow:
     def __init__(self):
-        currentPosition = 0
-        lastPosition = 0
+        self.currentPosition = 0
+        self.lastPosition = 0
         # Note that we are going to use the club name displayed
         # on the form table for now
-        club = ""
-        tableRank = 0
-        homeForm = []
-        homePoints = 0
-        awayForm = []
-        awayPoints = 0
-        lastSixMatches = []
-        totalPoints = 0
+        self.club = ""
+        self.tableRank = 0
+        self.homeForm = []
+        self.homePoints = 0
+        self.awayForm = []
+        self.awayPoints = 0
+        self.lastSixMatches = []
+        self.totalPoints = 0
 
     def __str__(self):
         s = "Current Position: " + str(self.currentPosition) + "\n"
