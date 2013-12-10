@@ -10,7 +10,7 @@ class FormGuideAdapter:
         rawData = formGuideScraper.getFormGuideData()
         rawDataSoup = BeautifulSoup(rawData)
         formGuideData = []
-        for tr in rawDataSoup.tbody.contents[:2]:
+        for tr in rawDataSoup.tbody.contents:
             if isinstance(tr, basestring):
                 continue
             formGuideRow = FormGuideRow()
@@ -31,21 +31,31 @@ class FormGuideAdapter:
                     elif tdCounter == 5:
                         formGuideRow.tableRank = int(td.contents[0])
                     elif tdCounter == 6:
-                        formGuideRow.homeForm = td.contents
+                        for result in td.contents:
+                            if isinstance(result, basestring):
+                                continue
+                            else:
+                                formGuideRow.homeForm.append(str(result.contents[0]))
                     elif tdCounter == 7:
                         formGuideRow.homePoints = int(td.contents[0])
                     elif tdCounter == 8:
-                        formGuideRow.awayForm = td.contents
+                        for result in td.contents:
+                            if isinstance(result, basestring):
+                                continue
+                            else:
+                                formGuideRow.awayForm.append(str(result.contents[0]))
                     elif tdCounter == 9:
                         formGuideRow.awayPoints = int(td.contents[0])
                     elif tdCounter == 10:
-                        formGuideRow.lastSixMatches = td.contents
+                        for result in td.contents:
+                            if isinstance(result, basestring):
+                                continue
+                            else:
+                                formGuideRow.lastSixMatches.append(str(result.contents[0]))
                     elif tdCounter == 11:
                         formGuideRow.totalPoints = int(td.contents[0])
             formGuideData.append(formGuideRow)
-        print formGuideData[0]
-
         
 # Example call
-formGuideAdapter = FormGuideAdapter()
-formGuideAdapter.getFormGuideData()
+# formGuideAdapter = FormGuideAdapter()
+# formGuideAdapter.getFormGuideData()
