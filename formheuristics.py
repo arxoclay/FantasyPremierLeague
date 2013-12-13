@@ -14,8 +14,9 @@ class FormHeuristics:
         
     # Returns a form discrepancy corresponding to each fixture row
     # -> List of (int, FixturesRow)
+    # The form discrepancy is computed by returning the difference of form table rankings
     # The discrepancy will be positive if its in the home team's favor and vice versa
-    def getFormDiscrepancy(self):
+    def getFormTableDiscrepancy(self):
         formDiscrepancyData = []
 
         for fixture in self.fixturesData:
@@ -34,7 +35,7 @@ class FormHeuristics:
 
 # Example call
 # formHeuristics = FormHeuristics()
-# formDiscrepancyData = formHeuristics.getFormDiscrepancy()
+# formDiscrepancyData = formHeuristics.getFormTableDiscrepancy()
 # for formDiscrepancy in formDiscrepancyData:
 #     print str(formDiscrepancy[0])
 #     print str(formDiscrepancy[1])
