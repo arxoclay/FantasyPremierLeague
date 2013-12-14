@@ -66,15 +66,15 @@ class FormHeuristics:
         raise NameError("No matching form information found for " + team)
 
 # Example call
-formHeuristics = FormHeuristics()
-formDiscrepancyData = formHeuristics.getFormTableDiscrepancy()
-hotnessDiscrepancyData = formHeuristics.getHotnessDiscrepancy()
-print "----Form Discrepancy----"
-for formDiscrepancy in formDiscrepancyData:
-    print str(formDiscrepancy[0])
-    print str(formDiscrepancy[1])
-print "----Hotness Discrepancy----"
-for hotnessDiscrepancy in hotnessDiscrepancyData:
-    print str(hotnessDiscrepancy[0])
-    print str(hotnessDiscrepancy[1])
+##formHeuristics = FormHeuristics()
+##formDiscrepancyData = formHeuristics.getFormTableDiscrepancy()
+##hotnessDiscrepancyData = formHeuristics.getHotnessDiscrepancy()
+##print "----Form Discrepancy----"
+##for formDiscrepancy in formDiscrepancyData:
+##    print str(formDiscrepancy[0])
+##    print str(formDiscrepancy[1])
+##print "----Hotness Discrepancy----"
+##for hotnessDiscrepancy in hotnessDiscrepancyData:
+##    print str(hotnessDiscrepancy[0])
+##    print str(hotnessDiscrepancy[1])
      
