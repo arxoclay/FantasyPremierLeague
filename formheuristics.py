@@ -5,7 +5,7 @@ from clubnamematcher import ClubNameMatcher
 
 class FormHeuristics:
 
-    hotnessWeights = (50, 30, 10, 5, 3, 2)
+    hotnessWeights = (2, 3, 5, 10, 30, 50)
     resultWeights = (100, 60, 0) # W,D,L
     
     def __init__(self):
@@ -77,4 +77,3 @@ class FormHeuristics:
 ##for hotnessDiscrepancy in hotnessDiscrepancyData:
 ##    print str(hotnessDiscrepancy[0])
 ##    print str(hotnessDiscrepancy[1])
-     
